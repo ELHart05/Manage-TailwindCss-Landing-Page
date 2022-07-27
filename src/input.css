@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: 90% -25%;
+    background-size: 800px;
+}
+
+#testamonials {
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: -90% 0%;
+}
+
+#cta {
+    background-image: url(../images/bg-simplify-section-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+@layer base {
+
+    input[type='submit'],
+    a,
+    path {
+        transition: 1s;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        background-position: 50px -50px;
+        background-size: 500px;
+    }
+
+    #testamonials {
+        background-position: center;
+    }
+
+    #cta {
+        background-image: url(../images/bg-simplify-section-mobile.svg);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-ul,
+    .nav-brand {
+        transform: translate(-50%, -50%);
+        transition: 2s;
+    }
+
+    .nav-brand {
+        @apply absolute left-1/2 flex-col;
+        top: -1500px;
+    }
+
+    .nav-brand-top {
+        top: 400px;
+    }
+
+    .nav-ul {
+        @apply absolute left-1/2 flex-col bg-brightRed gap-y-6 p-7 pb-28 rounded-lg text-white items-center;
+        width: 90%;
+        max-width: 460px;
+        top: -1500px;
+    }
+
+    .nav-ul-top {
+        top: 285px;
+    }
+}
